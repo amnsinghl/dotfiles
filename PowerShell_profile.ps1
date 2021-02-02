@@ -13,11 +13,10 @@ Set-PSReadLineKeyHandler -Key Tab -Function MenuComplete
 Set-PSReadLineOption -HistorySearchCursorMovesToEnd
 Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward
 Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward
-
+Set-PSReadLineKeyHandler -Chord "RightArrow" -Function ForwardWord
 
 #Set the color for Prediction (auto-suggestion)
 #Set-PSReadlineOption -Colors @{Prediction = 'DarkGreen' }
-#Set-PSReadLineKeyHandler -Chord "RightArrow" -Function ForwardWord
 
 $installPath = &"C:\Program Files (x86)\Microsoft Visual Studio\Installer\vswhere.exe" -version 16.0 -property installationpath
 Import-Module (Join-Path $installPath "Common7\Tools\Microsoft.VisualStudio.DevShell.dll")
