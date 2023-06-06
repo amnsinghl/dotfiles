@@ -43,6 +43,9 @@
 
     ; Delete
     !x::SendInput {Del}
+    AppsKey::SendInput -
+    +AppsKey::SendInput _
+    RSHIFT:: SendInput {Esc}
 #IfWinNotActive
 
 ; Window arrangement
