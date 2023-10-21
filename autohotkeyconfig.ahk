@@ -40,12 +40,18 @@
     ^!+l::SendInput +{End}
     #w::SendInput ^w
     #q::SendInput !{F4} 
+    MButton::SendInput {BS}
 
     ; Delete
     !x::SendInput {Del}
-    AppsKey::SendInput -
-    +AppsKey::SendInput _
-    RSHIFT:: SendInput {Esc}
+    #t::SendInput ^+h
+    #b::SendInput ^b
+    #f::SendInput ^u
+    #`::SendInput ^j
+    
+    LControl & XButton1::SendInput ^#{Left}
+    LControl & XButton2::SendInput ^#{Right}
+    Capslock::Esc
 #IfWinNotActive
 
 ; Window arrangement
@@ -54,4 +60,5 @@
 #!h::SendInput #{Left}
 #!l::SendInput #{Right}
 
+ 
 #UseHook off
